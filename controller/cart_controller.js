@@ -1,7 +1,7 @@
 const { ObjectId } = require("mongodb");
 const cart_model = require("../model/cart_model");
 
-exports.getOneCategory = async (req, res) => {
+exports.getOne = async (req, res) => {
   const _id = ObjectId(req.params.id);
   const cart = await cart_model.findOne({ _id });
 
