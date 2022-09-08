@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const currentPort = process.env.PORT || 4000;
+const currentPort = process.env.PORT || 4005;
 const authRoutes = require("./routes/auth");
 const catogoryRoutes = require("./routes/category")
 const productRoutes = require("./routes/products_routes");
@@ -9,7 +9,7 @@ const favouriteRoutes = require("./routes/favourite");
 const connectDb = require("./db/mongodb");
 
 
-app.get("/",(req,res)=>{
+app.get("/", (req, res) => {
   res.status(200).send("Server Runnig Successfully");
 });
 
